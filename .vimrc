@@ -35,23 +35,21 @@ Plug 'https://github.com/mileszs/ack.vim.git'
 Plug 'sheerun/vim-polyglot'
 Plug 'ryanoasis/vim-devicons'
 Plug 'https://github.com/tpope/vim-commentary.git'
-Plug 'kaicataldo/material.vim'
 
 call plug#end()
 
-" material theme settings
-let g:material_theme_style = 'dark'
+" ====================== color schemes ==========================
+" Vim Airline Themes
+let g:airline_theme='tomorrow'
 
-" set color scheme
+colorscheme gruvbox
 set background=dark
-colorscheme material
+" ====================== color schemes ==========================
 
-" colorscheme gruvbox
-" set background=dark
-
+" ====================== key mappings ==========================
 let mapleader = " "
 
-nnoremap <leader>s :w<CR>
+nnoremap <leader>s :w<CR> 
 nnoremap <leader>q :q<CR>
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
@@ -59,6 +57,11 @@ nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>f :Ack 
 
+map <Enter> o<ESC>
+map <S-Enter> O<ESC>
+" ====================== key mappings ==========================
+
+" ====================== nerd tree ==========================
 " NERDTree plugin
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif " Automatically open NERDTree when open 'vim'
@@ -80,9 +83,6 @@ let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_powerline_fonts = 1
 
-" Vim Airline Themes
-let g:airline_theme='tomorrow'
-
 " Ctrip settings
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 let g:ctrlp_clear_cache_on_exit = 0
@@ -91,7 +91,9 @@ let g:ctrlp_clear_cache_on_exit = 0
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif 
+" ====================== nerd tree ==========================
 
+" ====================== vim-devicon ==========================
 " Vim-devicon settings
 " Create a dictionary of the colors for later use
 let g:sol = {
@@ -169,4 +171,6 @@ let g:devicons_colors = {
     \'green': ['', '', '', '']
 \}
 call DeviconsColors(g:devicons_colors)
+" ====================== vim-devicon ==========================
+
 

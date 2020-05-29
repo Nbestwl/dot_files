@@ -39,9 +39,6 @@ Plug 'https://github.com/tpope/vim-commentary.git'
 call plug#end()
 
 " ====================== color schemes ==========================
-" Vim Airline Themes
-let g:airline_theme='tomorrow'
-
 colorscheme gruvbox
 set background=dark
 " ====================== color schemes ==========================
@@ -58,7 +55,17 @@ nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>f :Ack 
 
 map <Enter> o<ESC>
-map <S-Enter> O<ESC>
+
+nnoremap <Leader>bl :ls<CR>
+nnoremap <Leader>bp :bp<CR>
+nnoremap <Leader>bn :bn<CR>
+
+nnoremap tn :tabnew<Space>
+nnoremap tc :tabclose<CR>
+nnoremap tk :tabnext<CR>
+nnoremap tj :tabprev<CR>
+nnoremap th :tabfirst<CR>
+nnoremap tl :tablast<CR>
 " ====================== key mappings ==========================
 
 " ====================== nerd tree ==========================
@@ -73,7 +80,13 @@ nnoremap <silent> <Leader>n :NERDTreeToggle<CR>
 let NERDTreeShowLineNumbers=1
 " make sure relative line numbers are used
 autocmd FileType nerdtree setlocal relativenumber
+" open a file in new tab
+let NERDTreeMapOpenInTab='\r'
+" keep nerd tree open in new tabs
+autocmd BufWinEnter * NERDTreeMirror
+" ====================== nerd tree ==========================
 
+" ======================  airline ==========================
 " Vim Airline
 " Show Smarter Tab Line => Automatically display all buffers when there is
 " only one tab open
@@ -83,6 +96,11 @@ let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_powerline_fonts = 1
 
+" Vim Airline Themes
+" let g:airline_theme='tomorrow'
+" ======================  airline ==========================
+
+" ======================  search ==========================
 " Ctrip settings
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 let g:ctrlp_clear_cache_on_exit = 0
@@ -91,7 +109,7 @@ let g:ctrlp_clear_cache_on_exit = 0
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif 
-" ====================== nerd tree ==========================
+" ======================  search ==========================
 
 " ====================== vim-devicon ==========================
 " Vim-devicon settings

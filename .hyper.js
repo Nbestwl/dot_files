@@ -8,8 +8,13 @@ module.exports = {
 		fontSize: 13,
 
 		// font family with optional fallbacks
-		fontFamily: 'Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+		fontFamily: '"Fira Code", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace, hack nerd font mono',
 
+		// default font weight: 'normal' or 'bold'
+        fontWeight: 'normal',
+        // font weight for bold characters: 'normal' or 'bold'
+        fontWeightBold: 'bold',
+		
 		// terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
 		cursorColor: '#64FFDA',
 
@@ -75,7 +80,7 @@ module.exports = {
 
 				// Set the rgba() app background opacity, useful when enableVibrance is true
 				// OPTIONS: From 0.1 to 1
-				backgroundOpacity: '1',
+				backgroundOpacity: '0.8',
 
 				// Set the accent color for the current active tab
 				accentColor: '#64FFDA',
@@ -128,7 +133,7 @@ module.exports = {
 	//   `hyperpower`
 	//   `@company/project`
 	//   `project#1.0.1`
-	plugins: ['hyperpower', "hypercwd", "hyper-material-theme"],
+	plugins: ['hyperpower', "hypercwd", "hyper-material-theme", "hyper-font-ligatures"],
 
 	// in development, you can create a directory under
 	// `~/.hyper_plugins/local/` and include it here

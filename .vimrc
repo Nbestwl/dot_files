@@ -17,7 +17,7 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
-set termguicolors
+set notermguicolors
 set scrolloff=8
 set colorcolumn=120
 set encoding=UTF-8
@@ -25,7 +25,6 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'morhetz/gruvbox'
 Plug 'https://github.com/scrooloose/nerdtree.git'
 Plug 'https://github.com/Valloric/YouCompleteMe.git', { 'do' : './install.py --all' }
 Plug 'https://github.com/vim-airline/vim-airline.git'
@@ -35,12 +34,16 @@ Plug 'https://github.com/mileszs/ack.vim.git'
 Plug 'sheerun/vim-polyglot'
 Plug 'ryanoasis/vim-devicons'
 Plug 'https://github.com/tpope/vim-commentary.git'
+Plug 'kaicataldo/material.vim'
 
 call plug#end()
 
 " ====================== color schemes ==========================
-colorscheme gruvbox
+let g:material_terminal_italics = 0
+let g:material_theme_style = 'palenight'
+
 set background=dark
+colorscheme material
 " ====================== color schemes ==========================
 
 " ====================== key mappings ==========================

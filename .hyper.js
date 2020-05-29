@@ -8,10 +8,10 @@ module.exports = {
 		fontSize: 12,
 
 		// font family with optional fallbacks
-		fontFamily: '"Fira Code", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace, hack nerd font mono',
+		fontFamily: 'Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace, hack nerd font mono',
 
 		// default font weight: 'normal' or 'bold'
-        fontWeight: 'normal',
+        fontWeight: 'bold',
         // font weight for bold characters: 'normal' or 'bold'
         fontWeightBold: 'bold',
 		
@@ -76,11 +76,11 @@ module.exports = {
 		MaterialTheme: {
 				// Set the theme variant,
 				// OPTIONS: 'Darker', 'Palenight', ''
-				theme: 'Darker',
+				theme: 'Palenight',
 
 				// Set the rgba() app background opacity, useful when enableVibrance is true
 				// OPTIONS: From 0.1 to 1
-				backgroundOpacity: '0.8',
+				backgroundOpacity: '1',
 
 				// Set the accent color for the current active tab
 				accentColor: '#64FFDA',
@@ -133,7 +133,7 @@ module.exports = {
 	//   `hyperpower`
 	//   `@company/project`
 	//   `project#1.0.1`
-	plugins: ["hypercwd", "hyper-material-theme", "hyper-font-ligatures", "hyperpower"],
+	plugins: ["hypercwd", "hyper-material-theme", "hyperpower"],
 
 	// in development, you can create a directory under
 	// `~/.hyper_plugins/local/` and include it here

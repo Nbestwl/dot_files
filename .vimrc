@@ -1,5 +1,6 @@
 syntax on
 
+set clipboard=unnamed
 set noshowmatch
 set relativenumber
 set nohlsearch
@@ -21,6 +22,10 @@ set notermguicolors
 set scrolloff=8
 set colorcolumn=120
 set encoding=UTF-8
+"============= enable backspace =========================
+set whichwrap+=<,>,h,l,[,]	" Wrapping to next or previous lines when moving
+set backspace=2
+"============= enable backspace =========================
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 call plug#begin('~/.vim/plugged')
@@ -51,10 +56,10 @@ let mapleader = " "
 
 nnoremap <leader>s :w<CR> 
 nnoremap <leader>q :q<CR>
-nnoremap <leader>h :wincmd h<CR>
-nnoremap <leader>j :wincmd j<CR>
-nnoremap <leader>k :wincmd k<CR>
-nnoremap <leader>l :wincmd l<CR>
+nnoremap <C-h> :wincmd h<CR>
+nnoremap <C-j> :wincmd j<CR>
+nnoremap <C-k> :wincmd k<CR>
+nnoremap <C-l> :wincmd l<CR>
 nnoremap <leader>f :Ack 
 
 map <Enter> o<ESC>
@@ -68,6 +73,9 @@ nnoremap tk :tabnext<CR>
 nnoremap tj :tabprev<CR>
 nnoremap th :tabfirst<CR>
 nnoremap tl :tablast<CR>
+
+" Go to definition
+nnoremap <silent> <leader>gd :YcmCompleter GoTo<CR>
 " ====================== key mappings ==========================
 
 " ====================== nerd tree ==========================

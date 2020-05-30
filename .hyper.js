@@ -12,14 +12,12 @@ module.exports = {
 
 		// default font weight: 'normal' or 'bold'
         fontWeight: 'bold italic',
-        // font weight for bold characters: 'normal' or 'bold'
-        fontWeightBold: 'bold',
 		
 		// terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
 		cursorColor: '#64FFDA',
 
 		// `BEAM` for |, `UNDERLINE` for _, `BLOCK` for █
-		cursorShape: 'UNDERLINE',
+		cursorShape: 'BLOCK',
 
 		// set to true for blinking cursor
 		cursorBlink: true,
@@ -133,7 +131,7 @@ module.exports = {
 	//   `hyperpower`
 	//   `@company/project`
 	//   `project#1.0.1`
-	plugins: ["hypercwd", "hyper-material-theme", "hyperpower"],
+	plugins: ["hypercwd", "hyper-material-theme", "hyperpower", "hyper-pane"],
 
 	// in development, you can create a directory under
 	// `~/.hyper_plugins/local/` and include it here

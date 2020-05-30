@@ -59,9 +59,8 @@ nnoremap <leader>f :Ack
 
 map <Enter> o<ESC>
 
-nnoremap <Leader>bl :ls<CR>
-nnoremap <Leader>bp :bp<CR>
-nnoremap <Leader>bn :bn<CR>
+nnoremap ˜ :bp<CR>
+nnoremap π :bn<CR>
 
 nnoremap tn :tabnew<Space>
 nnoremap tc :tabclose<CR>

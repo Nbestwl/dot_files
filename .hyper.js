@@ -11,7 +11,7 @@ module.exports = {
 		fontFamily: 'Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace, hack nerd font mono',
 
 		// default font weight: 'normal' or 'bold'
-        fontWeight: 'bold',
+        fontWeight: 'bold italic',
         // font weight for bold characters: 'normal' or 'bold'
         fontWeightBold: 'bold',
 		

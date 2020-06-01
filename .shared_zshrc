@@ -64,6 +64,7 @@ source $ZSH/oh-my-zsh.sh
 
 # ============================== Alias ===============================
 # Example aliases
+alias hy="vim ~/.hyper.js"
 alias sv="vim ~/.shared_zshrc"
 alias vc="vim ~/.vimrc"
 alias zsh="vim ~/.zshrc"

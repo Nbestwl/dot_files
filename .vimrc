@@ -22,6 +22,7 @@ set notermguicolors
 set scrolloff=8
 set colorcolumn=120
 set encoding=UTF-8
+set splitbelow
 "============= enable backspace =========================
 set whichwrap+=<,>,h,l,[,]	" Wrapping to next or previous lines when moving
 set backspace=2
@@ -40,6 +41,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'ryanoasis/vim-devicons'
 Plug 'https://github.com/tpope/vim-commentary.git'
 Plug 'kaicataldo/material.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'https://github.com/airblade/vim-gitgutter.git'
 
 call plug#end()
 
@@ -74,6 +77,9 @@ nnoremap tj :tabprev<CR>
 nnoremap th :tabfirst<CR>
 nnoremap tl :tablast<CR>
 
+nmap <leader>gs :G<CR>
+nmap <leader>gf :diffget //2<CR>
+nmap <leader>gj :diffget //3<CR>
 " Go to definition
 nnoremap <silent> <leader>gd :YcmCompleter GoTo<CR>
 " ====================== key mappings ==========================
@@ -92,6 +98,8 @@ let NERDTreeShowLineNumbers=1
 autocmd FileType nerdtree setlocal relativenumber
 " open a file in new tab
 let NERDTreeMapOpenInTab='\r'
+" set the window sizw
+let g:NERDTreeWinSize=45
 " keep nerd tree open in new tabs
 autocmd BufWinEnter * NERDTreeMirror
 " ====================== nerd tree ==========================

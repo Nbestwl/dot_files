@@ -43,6 +43,8 @@ Plug 'https://github.com/tpope/vim-commentary.git'
 Plug 'kaicataldo/material.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'https://github.com/airblade/vim-gitgutter.git'
+Plug 'tpope/vim-surround' " replace quotes and symbols around the closing content 
+Plug 'https://github.com/Raimondi/delimitMate.git' " auto complete quotes
 
 call plug#end()
 
@@ -55,6 +57,12 @@ colorscheme material
 " ====================== color schemes ==========================
 
 " ====================== key mappings ==========================
+" disable arrow keys 
+nnoremap <Left> :wincmd h<CR>
+nnoremap <Down> :wincmd j<CR>
+nnoremap <Up> :wincmd k<CR>
+nnoremap <Right> :wincmd l<CR>
+
 let mapleader = " "
 
 nnoremap <leader>s :w<CR> 
@@ -70,6 +78,7 @@ map <Enter> o<ESC>
 nnoremap ˜ :bp<CR>
 nnoremap π :bn<CR>
 
+" window movements
 nnoremap tn :tabnew<Space>
 nnoremap tc :tabclose<CR>
 nnoremap tk :tabnext<CR>
@@ -77,9 +86,11 @@ nnoremap tj :tabprev<CR>
 nnoremap th :tabfirst<CR>
 nnoremap tl :tablast<CR>
 
+" fugitive mapping
 nmap <leader>gs :G<CR>
 nmap <leader>gf :diffget //2<CR>
 nmap <leader>gj :diffget //3<CR>
+
 " Go to definition
 nnoremap <silent> <leader>gd :YcmCompleter GoTo<CR>
 " ====================== key mappings ==========================

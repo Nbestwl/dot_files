@@ -22,10 +22,12 @@ set notermguicolors
 set scrolloff=8
 set colorcolumn=120
 set encoding=UTF-8
-set splitbelow
+" set splitbelow
+
 "============= enable backspace =========================
 set whichwrap+=<,>,h,l,[,]	" Wrapping to next or previous lines when moving
 set backspace=2
+
 "============= enable backspace =========================
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
@@ -57,7 +59,7 @@ colorscheme material
 " ====================== color schemes ==========================
 
 " ====================== key mappings ==========================
-" disable arrow keys 
+" remapping arrow keys to control window flow
 nnoremap <Left> :wincmd h<CR>
 nnoremap <Down> :wincmd j<CR>
 nnoremap <Up> :wincmd k<CR>
@@ -65,16 +67,22 @@ nnoremap <Right> :wincmd l<CR>
 
 let mapleader = " "
 
+" file save and quit 
 nnoremap <leader>s :w<CR> 
 nnoremap <leader>q :q<CR>
+
+" remapping control to window flow
 nnoremap <C-h> :wincmd h<CR>
 nnoremap <C-j> :wincmd j<CR>
 nnoremap <C-k> :wincmd k<CR>
 nnoremap <C-l> :wincmd l<CR>
+
+" search
 nnoremap <leader>f :Ack 
 
 map <Enter> o<ESC>
 
+" buffer flow
 nnoremap ˜ :bp<CR>
 nnoremap π :bn<CR>
 
@@ -87,7 +95,7 @@ nnoremap th :tabfirst<CR>
 nnoremap tl :tablast<CR>
 
 " fugitive mapping
-nmap <leader>gs :G<CR>
+nmap <leader>gs :Gstatus<CR>:20wincmd_<CR>
 nmap <leader>gf :diffget //2<CR>
 nmap <leader>gj :diffget //3<CR>
 

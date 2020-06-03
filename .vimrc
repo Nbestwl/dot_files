@@ -20,7 +20,7 @@ set undofile
 set incsearch
 set notermguicolors
 set scrolloff=8
-set colorcolumn=120
+set colorcolumn=100
 set encoding=UTF-8
 " set splitbelow
 
@@ -47,6 +47,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'https://github.com/airblade/vim-gitgutter.git'
 Plug 'tpope/vim-surround' " replace quotes and symbols around the closing content 
 Plug 'https://github.com/Raimondi/delimitMate.git' " auto complete quotes
+Plug 'https://github.com/morhetz/gruvbox.git'
 
 call plug#end()
 
@@ -55,7 +56,7 @@ let g:material_terminal_italics = 0
 let g:material_theme_style = 'palenight'
 
 set background=dark
-colorscheme material
+colorscheme gruvbox
 " ====================== color schemes ==========================
 
 " ====================== key mappings ==========================
@@ -118,7 +119,7 @@ autocmd FileType nerdtree setlocal relativenumber
 " open a file in new tab
 let NERDTreeMapOpenInTab='\r'
 " set the window sizw
-let g:NERDTreeWinSize=45
+let g:NERDTreeWinSize=35
 " keep nerd tree open in new tabs
 autocmd BufWinEnter * NERDTreeMirror
 " ====================== nerd tree ==========================
@@ -144,7 +145,7 @@ let g:ctrlp_clear_cache_on_exit = 0
 
 " silver search
 if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
+    let g:ackprg = 'ag --vimgrep'
 endif 
 " ======================  search ==========================
 

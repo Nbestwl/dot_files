@@ -74,7 +74,7 @@ module.exports = {
 		MaterialTheme: {
 				// Set the theme variant,
 				// OPTIONS: 'Darker', 'Palenight', ''
-				theme: 'Palenight',
+				theme: 'Darker',
 
 				// Set the rgba() app background opacity, useful when enableVibrance is true
 				// OPTIONS: From 0.1 to 1

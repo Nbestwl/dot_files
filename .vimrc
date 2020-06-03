@@ -37,8 +37,6 @@ Plug 'https://github.com/scrooloose/nerdtree.git'
 Plug 'https://github.com/Valloric/YouCompleteMe.git', { 'do' : './install.py --all' }
 Plug 'https://github.com/vim-airline/vim-airline.git'
 Plug 'https://github.com/vim-airline/vim-airline-themes.git'
-Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
-Plug 'https://github.com/mileszs/ack.vim.git'
 Plug 'sheerun/vim-polyglot'
 Plug 'ryanoasis/vim-devicons'
 Plug 'https://github.com/tpope/vim-commentary.git'
@@ -48,6 +46,8 @@ Plug 'https://github.com/airblade/vim-gitgutter.git'
 Plug 'tpope/vim-surround' " replace quotes and symbols around the closing content 
 Plug 'https://github.com/Raimondi/delimitMate.git' " auto complete quotes
 Plug 'https://github.com/morhetz/gruvbox.git'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
@@ -55,8 +55,11 @@ call plug#end()
 let g:material_terminal_italics = 0
 let g:material_theme_style = 'palenight'
 
-set background=dark
-colorscheme gruvbox
+" set background=dark
+" colorscheme gruvbox
+" let g:gruvbox_contrast_dark = 'hard' 
+
+colorscheme material
 " ====================== color schemes ==========================
 
 " ====================== key mappings ==========================
@@ -78,9 +81,6 @@ nnoremap <C-j> :wincmd j<CR>
 nnoremap <C-k> :wincmd k<CR>
 nnoremap <C-l> :wincmd l<CR>
 
-" search
-nnoremap <leader>f :Ack 
-
 map <Enter> o<ESC>
 
 " buffer flow
@@ -96,12 +96,23 @@ nnoremap th :tabfirst<CR>
 nnoremap tl :tablast<CR>
 
 " fugitive mapping
-nmap <leader>gs :Gstatus<CR>:20wincmd_<CR>
+nmap <leader>gs :Gstatus<CR>
 nmap <leader>gf :diffget //2<CR>
 nmap <leader>gj :diffget //3<CR>
 
 " Go to definition
 nnoremap <silent> <leader>gd :YcmCompleter GoTo<CR>
+
+" Keymapping for fzf
+nmap <Leader>f :Files<CR>
+nmap <Leader>F :GFiles<CR>
+nmap <Leader>b :Buffers<CR>
+nmap <Leader>h :History:<CR>
+nmap <Leader>H :History/<CR>
+nmap <Leader>/ :Ag<CR>
+nmap <Leader>C :Commands<CR>
+nmap <Leader>: :History:<CR>
+nmap <Leader>M :Maps<CR>
 " ====================== key mappings ==========================
 
 " ====================== nerd tree ==========================
@@ -109,7 +120,7 @@ nnoremap <silent> <leader>gd :YcmCompleter GoTo<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif " Automatically open NERDTree when open 'vim'
 " Close vim if only NERDTree is open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " NERDTreeToggle
 nnoremap <silent> <Leader>n :NERDTreeToggle<CR>
 " enable line numbers
@@ -119,7 +130,7 @@ autocmd FileType nerdtree setlocal relativenumber
 " open a file in new tab
 let NERDTreeMapOpenInTab='\r'
 " set the window sizw
-let g:NERDTreeWinSize=35
+let g:NERDTreeWinSize=40
 " keep nerd tree open in new tabs
 autocmd BufWinEnter * NERDTreeMirror
 " ====================== nerd tree ==========================
@@ -137,17 +148,6 @@ let g:airline_powerline_fonts = 1
 " Vim Airline Themes
 " let g:airline_theme='tomorrow'
 " ======================  airline ==========================
-
-" ======================  search ==========================
-" Ctrip settings
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
-let g:ctrlp_clear_cache_on_exit = 0
-
-" silver search
-if executable('ag')
-    let g:ackprg = 'ag --vimgrep'
-endif 
-" ======================  search ==========================
 
 " ====================== vim-devicon ==========================
 " Vim-devicon settings

@@ -48,6 +48,7 @@ Plug 'https://github.com/Raimondi/delimitMate.git' " auto complete quotes
 Plug 'https://github.com/morhetz/gruvbox.git'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'https://github.com/vim-syntastic/syntastic.git'
 
 call plug#end()
 
@@ -110,6 +111,7 @@ nmap <Leader>b :Buffers<CR>
 nmap <Leader>h :History:<CR>
 nmap <Leader>H :History/<CR>
 nmap <Leader>/ :Ag<CR>
+nmap <Leader>c :Colors<CR>
 nmap <Leader>C :Commands<CR>
 nmap <Leader>: :History:<CR>
 nmap <Leader>M :Maps<CR>
@@ -148,6 +150,17 @@ let g:airline_powerline_fonts = 1
 " Vim Airline Themes
 " let g:airline_theme='tomorrow'
 " ======================  airline ==========================
+
+" ======================  syntastic ==========================
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+" ======================  syntastic ==========================
 
 " ====================== vim-devicon ==========================
 " Vim-devicon settings

@@ -1,3 +1,5 @@
+source ~/.vimrc_coc
+
 syntax on
 
 set clipboard=unnamed
@@ -33,22 +35,21 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'https://github.com/scrooloose/nerdtree.git'
-Plug 'https://github.com/Valloric/YouCompleteMe.git', { 'do' : './install.py --all' }
-Plug 'https://github.com/vim-airline/vim-airline.git'
-Plug 'https://github.com/vim-airline/vim-airline-themes.git'
+Plug 'scrooloose/nerdtree'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'sheerun/vim-polyglot'
 Plug 'ryanoasis/vim-devicons'
-Plug 'https://github.com/tpope/vim-commentary.git'
+Plug 'tpope/vim-commentary'
 Plug 'kaicataldo/material.vim'
 Plug 'tpope/vim-fugitive'
-Plug 'https://github.com/airblade/vim-gitgutter.git'
+Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-surround' " replace quotes and symbols around the closing content 
-Plug 'https://github.com/Raimondi/delimitMate.git' " auto complete quotes
-Plug 'https://github.com/morhetz/gruvbox.git'
+Plug 'Raimondi/delimitMate' " auto complete quotes
+Plug 'morhetz/gruvbox'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'https://github.com/vim-syntastic/syntastic.git'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
@@ -63,18 +64,22 @@ let g:material_theme_style = 'palenight'
 colorscheme material
 " ====================== color schemes ==========================
 
-" ====================== key mappings ==========================
-" remapping arrow keys to control window flow
-nnoremap <Left> :wincmd h<CR>
-nnoremap <Down> :wincmd j<CR>
-nnoremap <Up> :wincmd k<CR>
-nnoremap <Right> :wincmd l<CR>
+" ====================== commands ==========================
+command! Reload :source ~/.vimrc
+" ====================== commands ==========================
 
+" ====================== key mappings ==========================
 let mapleader = " "
 
 " file save and quit 
 nnoremap <leader>s :w<CR> 
 nnoremap <leader>q :q<CR>
+
+" remapping arrow keys to control window flow
+nnoremap <Left> :wincmd h<CR>
+nnoremap <Down> :wincmd j<CR>
+nnoremap <Up> :wincmd k<CR>
+nnoremap <Right> :wincmd l<CR>
 
 " remapping control to window flow
 nnoremap <C-h> :wincmd h<CR>
@@ -98,20 +103,18 @@ nnoremap tl :tablast<CR>
 
 " fugitive mapping
 nmap <leader>gs :Gstatus<CR>
+nmap <leader>gc :G commit<CR>
 nmap <leader>gf :diffget //2<CR>
 nmap <leader>gj :diffget //3<CR>
 
-" Go to definition
-nnoremap <silent> <leader>gd :YcmCompleter GoTo<CR>
-
 " Keymapping for fzf
-nmap <Leader>f :Files<CR>
-nmap <Leader>F :GFiles<CR>
+nmap <Leader>f :GFiles<CR>
+nmap <Leader>F :Files<CR>
 nmap <Leader>b :Buffers<CR>
 nmap <Leader>h :History:<CR>
 nmap <Leader>H :History/<CR>
 nmap <Leader>/ :Ag<CR>
-nmap <Leader>c :Colors<CR>
+nmap <Leader>c :Commits<CR>
 nmap <Leader>C :Commands<CR>
 nmap <Leader>: :History:<CR>
 nmap <Leader>M :Maps<CR>
@@ -131,10 +134,14 @@ let NERDTreeShowLineNumbers=1
 autocmd FileType nerdtree setlocal relativenumber
 " open a file in new tab
 let NERDTreeMapOpenInTab='\r'
+" ignore the following files / folder
+let g:NERDTreeIgnore = ['^node_modules$']
 " set the window sizw
 let g:NERDTreeWinSize=40
 " keep nerd tree open in new tabs
 autocmd BufWinEnter * NERDTreeMirror
+
+map <leader>r :NERDTreeFind<CR>
 " ====================== nerd tree ==========================
 
 " ======================  airline ==========================
@@ -150,17 +157,6 @@ let g:airline_powerline_fonts = 1
 " Vim Airline Themes
 " let g:airline_theme='tomorrow'
 " ======================  airline ==========================
-
-" ======================  syntastic ==========================
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-" ======================  syntastic ==========================
 
 " ====================== vim-devicon ==========================
 " Vim-devicon settings

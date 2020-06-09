@@ -56,13 +56,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
 
 " ====================== color schemes ==========================
-let g:material_terminal_italics = 0
 let g:material_theme_style = 'palenight'
-
-" set background=dark
-" colorscheme gruvbox
-" let g:gruvbox_contrast_dark = 'hard' 
-
 colorscheme material
 " ====================== color schemes ==========================
 

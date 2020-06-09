@@ -123,6 +123,8 @@ module.exports = {
             startX: 0,
             startY: 0
         },
+        
+        confirmQuit: true
     },
 
     // a list of plugins to fetch and install from npm
@@ -136,7 +138,8 @@ module.exports = {
         "hyper-material-theme",
         "hyperpower",
         "hyper-pane",
-        "hyper-search"
+        "hyper-search",
+        'hyper-confirm'
     ],
 
     // in development, you can create a directory under

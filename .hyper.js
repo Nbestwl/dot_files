@@ -124,7 +124,7 @@ module.exports = {
             startY: 0
         },
         
-        confirmQuit: true
+        confirmQuit: true,
     },
 
     // a list of plugins to fetch and install from npm
@@ -139,7 +139,7 @@ module.exports = {
         "hyperpower",
         "hyper-pane",
         "hyper-search",
-        'hyper-confirm'
+        "hyper-confirm"
     ],
 
     // in development, you can create a directory under

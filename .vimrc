@@ -1,5 +1,6 @@
 source ~/.vimrc_coc
 
+filetype plugin on
 syntax on
 
 set clipboard=unnamed
@@ -57,8 +58,12 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
 
 " ====================== color schemes ==========================
-let g:material_theme_style = 'palenight'
-colorscheme material
+" let g:material_theme_style = 'palenight'
+" colorscheme material
+set background=dark
+colorscheme gruvbox
+
+let g:gruvbox_italicize_strings = 1
 " ====================== color schemes ==========================
 
 " ====================== commands ==========================
@@ -108,8 +113,8 @@ nmap <leader>gj :diffget //3<CR>
 nmap <Leader>f :GFiles<CR>
 nmap <Leader>F :Files<CR>
 nmap <Leader>b :Buffers<CR>
-nmap <Leader>h :History:<CR>
-nmap <Leader>H :History/<CR>
+nmap <Leader>h :History<CR>
+nmap <Leader>H :History:<CR>
 nmap <Leader>/ :Ag<CR>
 nmap <Leader>c :Commits<CR>
 nmap <Leader>C :Commands<CR>
@@ -137,6 +142,8 @@ let g:NERDTreeIgnore = ['^node_modules$']
 let g:NERDTreeWinSize=40
 " keep nerd tree open in new tabs
 autocmd BufWinEnter * NERDTreeMirror
+" Go to previous (last accessed) window.
+autocmd VimEnter * wincmd p
 
 map <leader>r :NERDTreeFind<CR>
 " ====================== nerd tree ==========================

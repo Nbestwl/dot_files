@@ -65,12 +65,15 @@ source $ZSH/oh-my-zsh.sh
 # ============================== Alias ===============================
 # Example aliases
 alias bf="vim ~/Brewfile"
+alias cconfig="vim ~/.vim/coc-settings.json"
+alias crc="vim ~/.vimrc_coc"
 alias gpom="gp origin master"
 alias hy="vim ~/.hyper.js"
 alias lg="lazygit"
 alias py="python"
 alias sv="vim ~/.shared_zshrc"
 alias vc="vim ~/.vimrc"
+alias y="yadm"
 alias ya="yadm add -u"
 alias yc="yadm commit -m"
 alias yd="yadm diff"

@@ -1,6 +1,5 @@
 source ~/.vimrc_coc
 
-filetype plugin on
 syntax on
 
 set clipboard=unnamed
@@ -26,12 +25,9 @@ set notermguicolors
 set scrolloff=8
 set colorcolumn=100
 set encoding=UTF-8
-" set splitbelow
-
 "============= enable backspace =========================
 set whichwrap+=<,>,h,l,[,]	" Wrapping to next or previous lines when moving
 set backspace=2
-
 "============= enable backspace =========================
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
@@ -39,7 +35,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'sheerun/vim-polyglot'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-commentary'
@@ -75,7 +70,7 @@ command! Reload :source ~/.vimrc
 " ====================== rainbow_parentheses ==========================
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
+" au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 " ====================== rainbow_parentheses ==========================
 
@@ -143,7 +138,7 @@ map <Leader>th <C-w>t<C-w>H
 map <Leader>tk <C-w>t<C-w>K
 
 " Removes pipes | that act as seperators on splits
-set fillchars+=vert:\
+set fillchars=""
 " ====================== key mappings ==========================
 
 " ====================== nerd tree ==========================
@@ -181,9 +176,6 @@ let g:airline#extensions#tabline#left_sep = ' '
 
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_powerline_fonts = 1
-
-" Vim Airline Themes
-" let g:airline_theme='tomorrow'
 " ======================  airline ==========================
 
 " ====================== vim-devicon ==========================

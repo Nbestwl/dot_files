@@ -54,21 +54,30 @@ Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'Yggdroot/indentLine'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'kien/rainbow_parentheses.vim'
 
 call plug#end()
 
 " ====================== color schemes ==========================
 " let g:material_theme_style = 'palenight'
 " colorscheme material
-set background=dark
-colorscheme gruvbox
 
 let g:gruvbox_italicize_strings = 1
+
+set background=dark
+colorscheme gruvbox
 " ====================== color schemes ==========================
 
 " ====================== commands ==========================
 command! Reload :source ~/.vimrc
 " ====================== commands ==========================
+
+" ====================== rainbow_parentheses ==========================
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+" ====================== rainbow_parentheses ==========================
 
 " ====================== key mappings ==========================
 let mapleader = " "

@@ -1,6 +1,8 @@
 source ~/.vimrc_coc
 
 syntax on
+" remove trailing spaces on save
+autocmd BufWritePre * :%s/\s\+$//e
 
 set clipboard=unnamed
 set noshowmatch
@@ -12,7 +14,6 @@ set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
 set smartindent
-set autoindent
 set nu
 set nowrap
 set smartcase
@@ -41,7 +42,7 @@ Plug 'tpope/vim-commentary'
 Plug 'kaicataldo/material.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-surround' " replace quotes and symbols around the closing content 
+Plug 'tpope/vim-surround' " replace quotes and symbols around the closing content
 Plug 'Raimondi/delimitMate' " auto complete quotes
 Plug 'morhetz/gruvbox'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -77,8 +78,8 @@ au Syntax * RainbowParenthesesLoadBraces
 " ====================== key mappings ==========================
 let mapleader = " "
 
-" file save and quit 
-nnoremap <leader>s :w<CR> 
+" file save and quit
+nnoremap <leader>s :w<CR>
 nnoremap <leader>q :q<CR>
 
 " remapping arrow keys to control window flow

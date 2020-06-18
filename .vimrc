@@ -51,7 +51,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'Yggdroot/indentLine'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'kien/rainbow_parentheses.vim'
-
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  } " If you have nodejs and yarn
 call plug#end()
 
 " ====================== color schemes ==========================
@@ -79,6 +79,7 @@ au Syntax * RainbowParenthesesLoadBraces
 " ====================== key mappings ==========================
 let mapleader = " "
 
+" use index 0 register by default when paste
 vnoremap p "0p
 
 " file save and quit
@@ -182,6 +183,12 @@ let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_powerline_fonts = 1
 " ======================  airline ==========================
+
+" ======================  markdown ==========================
+nmap <C-p> <Plug>MarkdownPreviewToggle
+let g:mkdp_refresh_slow = 1
+let g:mkdp_markdown_css = '~/github_markdown.css'
+" ======================  markdown ==========================
 
 " ====================== vim-devicon ==========================
 " Vim-devicon settings

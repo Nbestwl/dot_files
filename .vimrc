@@ -1,7 +1,6 @@
 source ~/.vimrc_coc
 
 syntax on
-" remove trailing spaces on save
 autocmd BufWritePre * :%s/\s\+$//e
 
 set clipboard=unnamed
@@ -59,7 +58,6 @@ call plug#end()
 " colorscheme material
 
 let g:gruvbox_italicize_strings = 1
-" let g:gruvbox_contrast_dark = 'soft'
 
 set background=dark
 colorscheme gruvbox
@@ -81,7 +79,6 @@ let mapleader = " "
 
 " use index 0 register by default when paste
 vnoremap p "0p
-
 " file save and quit
 nnoremap <leader>s :w<CR>
 nnoremap <leader>q :q<CR>
@@ -113,7 +110,6 @@ nnoremap th :tabfirst<CR>
 nnoremap tl :tablast<CR>
 
 " fugitive mapping
-nmap <leader>gd :Gdiff<CR>
 nmap <leader>gs :Gstatus<CR>
 nmap <leader>gc :G commit<CR>
 nmap <leader>gf :diffget //2<CR>
@@ -130,8 +126,6 @@ nmap <Leader>c :Commits<CR>
 nmap <Leader>C :Commands<CR>
 nmap <Leader>: :History:<CR>
 nmap <Leader>M :Maps<CR>
-
-set splitbelow splitright
 
 " Make adjusing split sizes a bit more friendly
 noremap <silent> <C-Left> :vertical resize +3<CR>

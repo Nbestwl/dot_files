@@ -51,8 +51,8 @@ Plug 'Yggdroot/indentLine'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  } " If you have nodejs and yarn
-call plug#end()
 
+call plug#end()
 " ====================== color schemes ==========================
 " let g:material_theme_style = 'palenight'
 " colorscheme material
@@ -115,18 +115,6 @@ nmap <leader>gc :G commit<CR>
 nmap <leader>gf :diffget //2<CR>
 nmap <leader>gj :diffget //3<CR>
 
-" Keymapping for fzf
-nmap <Leader>f :GFiles<CR>
-nmap <Leader>F :Files<CR>
-nmap <Leader>b :Buffers<CR>
-nmap <Leader>h :History<CR>
-nmap <Leader>H :History:<CR>
-nmap <Leader>/ :Ag<CR>
-nmap <Leader>c :Commits<CR>
-nmap <Leader>C :Commands<CR>
-nmap <Leader>: :History:<CR>
-nmap <Leader>M :Maps<CR>
-
 " Make adjusing split sizes a bit more friendly
 noremap <silent> <C-Left> :vertical resize +3<CR>
 noremap <silent> <C-Right> :vertical resize -3<CR>
@@ -140,6 +128,24 @@ map <Leader>tk <C-w>t<C-w>K
 " Removes pipes | that act as seperators on splits
 set fillchars=""
 " ====================== key mappings ==========================
+
+" ====================== fzf ==========================
+command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}), <bang>0)
+
+" Keymapping for fzf
+nmap <Leader>f :GFiles<CR>
+nmap <Leader>F :Files<CR>
+nmap <Leader>b :Buffers<CR>
+nmap <Leader>h :History<CR>
+nmap <Leader>H :History:<CR>
+nmap <Leader>/ :Ag<CR>
+" search the word under the cursor
+nmap <Leader>// :Ag <C-R><C-W><CR>
+nmap <Leader>c :Commits<CR>
+nmap <Leader>C :Commands<CR>
+nmap <Leader>: :History:<CR>
+nmap <Leader>M :Maps<CR>
+" ====================== fzf ==========================
 
 " ====================== nerd tree ==========================
 " NERDTree plugin

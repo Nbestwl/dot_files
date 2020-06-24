@@ -51,6 +51,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  } " If you have nodejs and yarn
+Plug 'justinmk/vim-sneak'
 
 call plug#end()
 " ====================== color schemes ==========================
@@ -189,6 +190,10 @@ nmap <C-p> <Plug>MarkdownPreviewToggle
 let g:mkdp_refresh_slow = 1
 let g:mkdp_markdown_css = '~/github_markdown.css'
 " ======================  markdown ==========================
+
+" ====================== sneak ==========================
+let g:sneak#label = 1
+" ====================== sneak ==========================
 
 " ====================== vim-devicon ==========================
 " Vim-devicon settings

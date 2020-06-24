@@ -193,6 +193,8 @@ let g:mkdp_markdown_css = '~/github_markdown.css'
 
 " ====================== sneak ==========================
 let g:sneak#label = 1
+let g:sneak#prompt = '🔎'
+highlight Sneak guifg=black guibg=#00C7DF ctermfg=black ctermbg=cyan
 " ====================== sneak ==========================
 
 " ====================== vim-devicon ==========================

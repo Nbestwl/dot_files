@@ -117,10 +117,10 @@ nmap <leader>gf :diffget //2<CR>
 nmap <leader>gj :diffget //3<CR>
 
 " Make adjusing split sizes a bit more friendly
-noremap <silent> <C-Left> :vertical resize +3<CR>
-noremap <silent> <C-Right> :vertical resize -3<CR>
-noremap <silent> <C-Up> :resize +3<CR>
-noremap <silent> <C-Down> :resize -3<CR>
+noremap <silent> <C-Left> :vertical resize -3<CR>
+noremap <silent> <C-Right> :vertical resize +3<CR>
+noremap <silent> <C-Up> :resize -3<CR>
+noremap <silent> <C-Down> :resize +3<CR>
 
 " Change 2 split windows from vert to horiz or horiz to vert
 map <Leader>th <C-w>t<C-w>H

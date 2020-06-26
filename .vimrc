@@ -13,6 +13,7 @@ set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
 set smartindent
+set autoindent
 set nu
 set nowrap
 set smartcase
@@ -42,7 +43,6 @@ Plug 'kaicataldo/material.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-surround' " replace quotes and symbols around the closing content
-Plug 'Raimondi/delimitMate' " auto complete quotes
 Plug 'morhetz/gruvbox'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -52,6 +52,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  } " If you have nodejs and yarn
 Plug 'justinmk/vim-sneak'
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 " ====================== color schemes ==========================

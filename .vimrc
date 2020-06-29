@@ -53,6 +53,7 @@ Plug 'kien/rainbow_parentheses.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  } " If you have nodejs and yarn
 Plug 'justinmk/vim-sneak'
 Plug 'jiangmiao/auto-pairs'
+Plug 'honza/vim-snippets' " Collection of Snippets, used by coc-snippet
 
 call plug#end()
 " ====================== color schemes ==========================

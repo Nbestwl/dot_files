@@ -1,5 +1,9 @@
 {
     "suggest.noselect": false,
     "diagnostic.checkCurrentLine": true,
-    "coc.preferences.formatOnSaveFiletypes": []
+    "coc.preferences.formatOnSaveFiletypes": [],
+    "snippets.extends": {
+        "javascriptreact": ["javascript"],
+        "typescript": ["javascript"]
+    }
 }

@@ -850,7 +850,7 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1680 1027 0 0 1680 1027 </string>
+	<string>0 0 2560 1417 0 0 2560 1417 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1548,6 +1548,8 @@
 			<integer>-1</integer>
 			<key>Scrollback Lines</key>
 			<integer>0</integer>
+			<key>Scrollback With Status Bar</key>
+			<false/>
 			<key>Selected Text Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -1593,7 +1595,7 @@
 			<key>Transparency</key>
 			<real>0.0</real>
 			<key>Unlimited Scrollback</key>
-			<false/>
+			<true/>
 			<key>Use Bold Font</key>
 			<true/>
 			<key>Use Bright Bold</key>
@@ -1626,9 +1628,9 @@
 	<key>NoSyncInstallationId</key>
 	<string>0952852F-E781-43CA-A1BC-C5E8A499D932</string>
 	<key>NoSyncLastTipTime</key>
-	<real>614827520.998873</real>
+	<real>615315306.00602102</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>22</integer>
+	<integer>28</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -2365,11 +2367,14 @@
 	<real>614102472.28259897</real>
 	<key>NoSyncTipsToNotShow</key>
 	<array>
+		<string>0003</string>
+		<string>0000</string>
+		<string>0004</string>
 		<string>0001</string>
 		<string>000</string>
+		<string>0005</string>
 		<string>0002</string>
-		<string>0000</string>
-		<string>0003</string>
+		<string>0006</string>
 	</array>
 	<key>PMPrintingExpandedStateForPrint2</key>
 	<false/>
@@ -2421,7 +2426,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-06-26T01:25:19Z</date>
+	<date>2020-07-01T16:40:52Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SeparateStatusBarsPerPane</key>

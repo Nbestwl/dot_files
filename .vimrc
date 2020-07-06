@@ -2,7 +2,10 @@ source ~/.vimrc_coc
 
 syntax on
 autocmd BufWritePre * :%s/\s\+$//e
+" set tabsize to 2 for javascript
+autocmd FileType javascriptreact setlocal shiftwidth=2 softtabstop=2 expandtab
 
+set splitbelow splitright         " open the split on right and below
 set clipboard=unnamed
 set noshowmatch
 set relativenumber
@@ -80,8 +83,6 @@ au Syntax * RainbowParenthesesLoadBraces
 " ====================== key mappings ==========================
 let mapleader = " "
 
-" use index 0 register by default when paste
-vnoremap p "0p
 " file save and quit
 nnoremap <leader>s :w<CR>
 nnoremap <leader>q :q<CR>
@@ -130,6 +131,21 @@ map <Leader>tk <C-w>t<C-w>K
 
 " Removes pipes | that act as seperators on splits
 set fillchars=""
+
+" Functions for increasing/decreasing tabstop and shiftwidth
+function! IncreaseTab()
+  exe 'set tabstop+=1'
+  exe 'set shiftwidth+=2'
+endfunction
+function! DecreaseTab()
+  exe 'set tabstop-=1'
+  exe 'set shiftwidth-=2'
+endfunction
+
+" Map Leader tab j and k to decrease or increase tabstop and shiftwidth
+:map <Leader><Tab>j :call DecreaseTab()<Enter>
+:map <Leader><Tab>k :call IncreaseTab()<Enter>
+
 " ====================== key mappings ==========================
 
 " ====================== fzf ==========================

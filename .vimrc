@@ -224,6 +224,7 @@ highlight Sneak guifg=black guibg=#00C7DF ctermfg=black ctermbg=cyan
 nmap <Leader>tt :TagbarToggle<CR>
 let g:tagbar_sort = 0
 let g:tagbar_show_linenumbers = -1
+let g:tagbar_width = 60
 " ====================== tagbar ==========================
 
 " color the nerdtree folder icon correctly

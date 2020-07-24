@@ -91,6 +91,11 @@ nmap <leader>rr <Plug>(coc-rename)
 " file save and quit
 nnoremap <leader>s :w<CR>
 nnoremap <leader>q :q<CR>
+" delete the current buffer
+nnoremap <leader>w :bd<CR>
+" paste with register "0
+nnoremap <leader>p "0p<CR>
+nnoremap <leader>P "0P<CR>
 
 " remapping arrow keys to control window flow
 nnoremap <Left> :wincmd h<CR>

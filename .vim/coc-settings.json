@@ -1,4 +1,6 @@
 {
+    "java.format.enabled": false,
+    "java.trace.server": "verbose",
     "suggest.noselect": false,
     "diagnostic.checkCurrentLine": true,
     "coc.preferences.formatOnSaveFiletypes": [],

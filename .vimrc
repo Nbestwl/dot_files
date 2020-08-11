@@ -4,6 +4,8 @@ syntax on
 autocmd BufWritePre * :%s/\s\+$//e " remove trailing sapce on save
 " set tabsize to 2 for javascript
 autocmd FileType javascriptreact setlocal shiftwidth=2 softtabstop=2 expandtab
+" disable trailing space highlight in python file
+let python_highlight_space_errors = 0
 
 set splitbelow splitright         " open the split on right and below
 set clipboard=unnamed
@@ -58,6 +60,8 @@ Plug 'justinmk/vim-sneak'
 Plug 'jiangmiao/auto-pairs'
 Plug 'honza/vim-snippets' " Collection of Snippets, used by coc-snippet
 Plug 'majutsushi/tagbar'
+Plug 'vim-test/vim-test'
+Plug 'gurpreetatwal/vim-avro'
 
 call plug#end()
 " ====================== color schemes ==========================
@@ -155,7 +159,6 @@ endfunction
 " Map Leader tab j and k to decrease or increase tabstop and shiftwidth
 :map <Leader><Tab>j :call DecreaseTab()<Enter>
 :map <Leader><Tab>k :call IncreaseTab()<Enter>
-
 " ====================== key mappings ==========================
 
 " ====================== fzf ==========================

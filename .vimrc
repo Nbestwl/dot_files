@@ -159,6 +159,9 @@ endfunction
 " Map Leader tab j and k to decrease or increase tabstop and shiftwidth
 :map <Leader><Tab>j :call DecreaseTab()<Enter>
 :map <Leader><Tab>k :call IncreaseTab()<Enter>
+
+" latex shortcut
+map <leader>la :ter ++close ++hidden latexmk -pvc %<CR>
 " ====================== key mappings ==========================
 
 " ====================== fzf ==========================

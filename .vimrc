@@ -31,7 +31,8 @@ set notermguicolors
 set scrolloff=8
 set colorcolumn=100
 set encoding=UTF-8
-"============= enable backspace =========================
+set cursorline " highlight the current line at cursor
+" ============= enable backspace =========================
 set whichwrap+=<,>,h,l,[,]	" Wrapping to next or previous lines when moving
 set backspace=2
 "============= enable backspace =========================

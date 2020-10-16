@@ -80,6 +80,7 @@ alias yd="yadm diff"
 alias yp="yadm push"
 alias ys="yadm status"
 alias zsh="vim ~/.zshrc"
+alias ra="ranger"
 # ============================== Alias ===============================
 
 

@@ -6,6 +6,7 @@ let g:coc_global_extensions = [
   \ 'coc-json',
   \ 'coc-python',
   \ 'coc-java',
+  \ 'coc-solargraph',
   \ ]
 
 let g:node_client_debug = 1

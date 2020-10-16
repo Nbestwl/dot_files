@@ -13,7 +13,6 @@ set splitbelow splitright         " open the split on right and below
 set clipboard=unnamed
 set noshowmatch
 set relativenumber
-set nohlsearch
 set hidden
 set noerrorbells
 set tabstop=4 softtabstop=4
@@ -33,7 +32,8 @@ set notermguicolors
 set scrolloff=8
 set colorcolumn=100
 set encoding=UTF-8
-"============= enable backspace =========================
+set cursorline " highlight the current line at cursor
+" ============= enable backspace =========================
 set whichwrap+=<,>,h,l,[,]	" Wrapping to next or previous lines when moving
 set backspace=2
 "============= enable backspace =========================
@@ -106,6 +106,10 @@ nnoremap <leader>w :bd<CR>
 " paste with register "0
 nnoremap <leader>p "0p<CR>
 nnoremap <leader>P "0P<CR>
+" disable highlight with enter
+nnoremap <leader>hh :set hls!<CR>
+" set highlight on search
+noremap / :set hlsearch<cr>/
 
 " remapping arrow keys to control window flow
 nnoremap <Left> :wincmd h<CR>

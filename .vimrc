@@ -11,7 +11,6 @@ set splitbelow splitright         " open the split on right and below
 set clipboard=unnamed
 set noshowmatch
 set relativenumber
-set nohlsearch
 set hidden
 set noerrorbells
 set tabstop=4 softtabstop=4
@@ -101,6 +100,10 @@ nnoremap <leader>w :bd<CR>
 " paste with register "0
 nnoremap <leader>p "0p<CR>
 nnoremap <leader>P "0P<CR>
+" disable highlight with enter
+nnoremap <leader>hh :set hls!<CR>
+" set highlight on search
+noremap / :set hlsearch<cr>/
 
 " remapping arrow keys to control window flow
 nnoremap <Left> :wincmd h<CR>

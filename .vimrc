@@ -140,6 +140,8 @@ nnoremap tl :tablast<CR>
 " fugitive mapping
 nmap <leader>gs :Gstatus<CR>
 nmap <leader>gc :G commit<CR>
+nmap <leader>gb :Gblame<CR>
+vmap <leader>gb :Gblame<CR>
 nmap <leader>gf :diffget //2<CR>
 nmap <leader>gj :diffget //3<CR>
 

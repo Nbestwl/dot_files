@@ -4,6 +4,8 @@ syntax on
 autocmd BufWritePre * :%s/\s\+$//e " remove trailing sapce on save
 " set tabsize to 2 for javascript
 autocmd FileType javascriptreact setlocal shiftwidth=2 softtabstop=2 expandtab
+" javacomplete
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
 " disable trailing space highlight in python file
 let python_highlight_space_errors = 0
 
@@ -62,6 +64,8 @@ Plug 'honza/vim-snippets' " Collection of Snippets, used by coc-snippet
 Plug 'majutsushi/tagbar'
 Plug 'vim-test/vim-test'
 Plug 'gurpreetatwal/vim-avro'
+Plug 'artur-shaik/vim-javacomplete2'
+Plug 'benmills/vimux'
 
 call plug#end()
 " ====================== color schemes ==========================
@@ -72,6 +76,8 @@ let g:gruvbox_italicize_strings = 1
 " let g:gruvbox_contrast_dark = 'hard'
 
 set background=dark
+" make tmux color consistent with vim
+set t_Co=256
 colorscheme gruvbox
 " ====================== color schemes ==========================
 
@@ -134,6 +140,8 @@ nnoremap tl :tablast<CR>
 " fugitive mapping
 nmap <leader>gs :Gstatus<CR>
 nmap <leader>gc :G commit<CR>
+nmap <leader>gb :Gblame<CR>
+vmap <leader>gb :Gblame<CR>
 nmap <leader>gf :diffget //2<CR>
 nmap <leader>gj :diffget //3<CR>
 
@@ -188,6 +196,28 @@ nmap <Leader>C :Commands<CR>
 nmap <Leader>: :History:<CR>
 nmap <Leader>M :Maps<CR>
 " ====================== fzf ==========================
+
+" ====================== vim-test ==========================
+let test#java#runner = 'maventest'
+let test#strategy = "vimux"
+let g:VimuxHeight = "30"
+" let test#custom_runners = {'java': ['Myrunner']}
+
+" close vimux pane
+map <Leader>vq :VimuxCloseRunner<CR>
+" mapping for test runner
+nmap <silent> t<C-n> :w \| :TestNearest<CR>
+nmap <silent> t<C-f> :w \| :TestFile<CR>
+nmap <silent> t<C-s> :w \| :TestSuite<CR>
+nmap <silent> t<C-l> :w \| :TestLast<CR>
+nmap <silent> t<C-g> :w \| :TestVisit<CR>
+" ====================== vim-test ==========================
+
+" ====================== java completion =========================
+nmap <leader>jr <Plug>(JavaComplete-Imports-RemoveUnused)
+nmap <leader>ji <Plug>(JavaComplete-Imports-Add)
+nmap <leader>jii <Plug>(JavaComplete-Imports-AddSmart)
+" ====================== java completion =========================
 
 " ====================== nerd tree ==========================
 " NERDTree plugin

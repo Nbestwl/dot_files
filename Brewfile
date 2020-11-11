@@ -6,5 +6,6 @@ brew "lazygit"
 brew "yadm"
 brew "bat"
 brew "fzf"
+brew "tmux"
 
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags

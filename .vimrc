@@ -102,7 +102,7 @@ nmap <leader>rr <Plug>(coc-rename)
 nnoremap <leader>s :w<CR>
 nnoremap <leader>q :q<CR>
 " delete the current buffer
-nnoremap <leader>w :bd<CR>
+nnoremap <leader>w :bp\|bd #<CR>
 " paste with register "0
 nnoremap <leader>p "0p<CR>
 nnoremap <leader>P "0P<CR>

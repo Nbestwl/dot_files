@@ -152,7 +152,7 @@ noremap <silent> <C-Up> :resize -3<CR>
 noremap <silent> <C-Down> :resize +3<CR>
 
 " run python
-nmap rr :!clear; python %<CR>
+" nmap rr :!clear; python %<CR>
 
 " Change 2 split windows from vert to horiz or horiz to vert
 map <Leader>th <C-w>t<C-w>H

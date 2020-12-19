@@ -63,7 +63,6 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'honza/vim-snippets' " Collection of Snippets, used by coc-snippet
 Plug 'majutsushi/tagbar'
 Plug 'vim-test/vim-test'
-Plug 'gurpreetatwal/vim-avro'
 Plug 'artur-shaik/vim-javacomplete2'
 Plug 'benmills/vimux'
 
@@ -97,6 +96,9 @@ let mapleader = " "
 
 " coc mapping
 nmap <leader>rr <Plug>(coc-rename)
+
+" yank all
+nmap <leader>yy :%y<CR>
 
 " file save and quit
 nnoremap <leader>s :w<CR>

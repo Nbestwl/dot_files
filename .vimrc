@@ -65,6 +65,7 @@ Plug 'majutsushi/tagbar'
 Plug 'vim-test/vim-test'
 Plug 'artur-shaik/vim-javacomplete2'
 Plug 'benmills/vimux'
+Plug 'junegunn/vim-easy-align'
 
 call plug#end()
 " ====================== color schemes ==========================
@@ -91,11 +92,21 @@ au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadBraces
 " ====================== rainbow_parentheses ==========================
 
+" ====================== vim easy align ==========================
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+" ====================== vim easy align ==========================
+
+
 " ====================== key mappings ==========================
 let mapleader = " "
 
 " coc mapping
 nmap <leader>rr <Plug>(coc-rename)
+" yank all
+nmap <leader>yy :%y<CR>
 
 " yank all
 nmap <leader>yy :%y<CR>
@@ -268,6 +279,9 @@ let g:mkdp_markdown_css = '~/github_markdown.css'
 let g:sneak#label = 1
 let g:sneak#prompt = '🔎'
 highlight Sneak guifg=black guibg=#00C7DF ctermfg=black ctermbg=cyan
+
+map f <Plug>Sneak_s
+map F <Plug>Sneak_S
 " ====================== sneak ==========================
 
 " ====================== tagbar ==========================

@@ -60,12 +60,13 @@ Plug 'kien/rainbow_parentheses.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  } " If you have nodejs and yarn
 Plug 'justinmk/vim-sneak'
 Plug 'jiangmiao/auto-pairs'
-Plug 'honza/vim-snippets' " Collection of Snippets, used by coc-snippet
 Plug 'majutsushi/tagbar'
 Plug 'vim-test/vim-test'
 Plug 'artur-shaik/vim-javacomplete2'
 Plug 'benmills/vimux'
 Plug 'junegunn/vim-easy-align'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 call plug#end()
 " ====================== color schemes ==========================
@@ -290,6 +291,18 @@ let g:tagbar_sort = 0
 let g:tagbar_show_linenumbers = -1
 let g:tagbar_width = 60
 " ====================== tagbar ==========================
+
+" ====================== ultisnips ==========================
+" Trigger configuration. You need to change this to something other than <tab> if you use one of the following:
+" - https://github.com/Valloric/YouCompleteMe
+" - https://github.com/nvim-lua/completion-nvim
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-n>"
+let g:UltiSnipsJumpBackwardTrigger="<c-p>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+" ====================== ultisnips ==========================
 
 " color the nerdtree folder icon correctly
 source ~/.vimrc_devicon

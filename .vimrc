@@ -4,6 +4,10 @@ syntax on
 autocmd BufWritePre * :%s/\s\+$//e " remove trailing sapce on save
 " set tabsize to 2 for javascript
 autocmd FileType javascriptreact setlocal shiftwidth=2 softtabstop=2 expandtab
+" set tabsize to 2 for java
+autocmd FileType java setlocal shiftwidth=2 softtabstop=2 expandtab
+" set tabsize to 4 for python
+autocmd FileType python setlocal shiftwidth=4 softtabstop=4 expandtab
 " javacomplete
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 " disable trailing space highlight in python file
@@ -15,8 +19,8 @@ set noshowmatch
 set relativenumber
 set hidden
 set noerrorbells
-set tabstop=4 softtabstop=4
-set shiftwidth=4
+set tabstop=2 softtabstop=2
+set shiftwidth=2
 set expandtab
 set smartindent
 set autoindent
@@ -140,8 +144,8 @@ nnoremap <C-l> :wincmd l<CR>
 map <Enter> o<ESC>
 
 " buffer flow
-nnoremap ˜ :bp<CR>
-nnoremap π :bn<CR>
+nnoremap ∆ :bp<CR>
+nnoremap ˚ :bn<CR>
 
 " window movements
 nnoremap tn :tabnew<Space>
@@ -255,6 +259,15 @@ let g:NERDTreeWinSize=40
 autocmd BufWinEnter * NERDTreeMirror
 " Go to previous (last accessed) window.
 autocmd VimEnter * wincmd p
+
+map <C-n> :call NERDTreeToggleAndRefresh()<CR>
+
+function NERDTreeToggleAndRefresh()
+  :NERDTreeToggle
+  if g:NERDTree.IsOpen()
+    :NERDTreeRefreshRoot
+  endif
+endfunction
 
 map <leader>r :NERDTreeFind<CR>
 " ====================== nerd tree ==========================

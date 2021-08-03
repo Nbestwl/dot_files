@@ -7,5 +7,6 @@
     "snippets.extends": {
         "javascriptreact": ["javascript"],
         "typescript": ["javascript"]
-    }
+    },
+    "java.format.settings.url": "/Users/lw069831/.config/coc/extensions/node_modules/redhat.java/eclipse-formatter.xml"
 }
